@@ -1,13 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  useState
+} from "react";
+
 import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
+
+import toast, {
+  Toaster
+} from "react-hot-toast";
+
 import imageCompression from "browser-image-compression";
-const API_URL =
-  "https://your-backend.onrender.com";
 
 import "./App.css";
 
 import loginImage from "./assests/login.png";
+
+const API_URL =
+  "https://your-backend.onrender.com";
+
 
 function App() {
 
@@ -89,7 +99,7 @@ const [loading, setLoading] =
     try {
 
       const res = await axios.post(
-        "${API_URL}/register",
+        `${API_URL}/register`,
         {
           email,
           password,
@@ -125,7 +135,7 @@ const [loading, setLoading] =
     try {
 
       const res = await axios.post(
-        "${API_URL}/login",
+        `${API_URL}/login`,
         {
           email,
           password,
@@ -192,7 +202,7 @@ const fetchFiles = async () => {
 
     const res = await axios.get(
 
-      "${API_URL}/files",
+      `${API_URL}/files`,
 
       {
         headers: {
@@ -310,7 +320,7 @@ for (
 
       await axios.post(
 
-  "${API_URL}/upload",
+  `${API_URL}/upload`,
 
   formData,
 
@@ -556,7 +566,7 @@ fetchFiles();
 
     await axios.put(
 
-      "${API_URL}/move-folder",
+      `${API_URL}/move-folder`,
 
       {
         oldFolder:
