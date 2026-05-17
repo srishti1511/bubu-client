@@ -16,7 +16,7 @@ import "./App.css";
 import loginImage from "./assests/login.png";
 
 const API_URL =
-  "https://bubu-server.onrender.com";
+  "https://bubu-server-2.onrender.com";
 
 
 function App() {
